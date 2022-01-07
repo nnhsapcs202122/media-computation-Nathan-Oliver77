@@ -14,7 +14,7 @@ The goal of this lab is for you to apply creatively the filters and transformati
 
 * the 4 copies includes the original image and at least 3 modifications of the original image
 
-    * you may find it convenient to start with a large, blank picturePicture canvas = new Picture(height, width);
+    * you may find it convenient to start with a large, blank picturePicture canvas = new Picture(height, width);
 
     * you must invoke the cropAndCopy method that you wrote in the previous programming activity
 

@@ -1,4 +1,4 @@
-
+import java.util.ArrayList;
 /**
  * Write a description of class Customer here.
  *
@@ -8,25 +8,34 @@
 public class Customer
 {
     private String name;
-    private ArrayList<Integer> sales;
+    private double sale;
     
     /**
      * Constructor for objects of class Customer
      */
-    public Customer(String name, ArrayList saleList)
+    public Customer(String name, double sale)
     {
-                
+      this.name = name;
+      this.sale = sale;
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
+    public String getName()
     {
-        // put your code here
-        return x + y;
+        return this.name;
+    }
+    
+    public double getSale()
+    {
+        return this.sale;
+    }
+    
+    public void setName(String newName)
+    {
+        this.name = newName;
+    }
+    
+    public void setSale(double newSale)
+    {
+        this.sale = newSale;
     }
 }

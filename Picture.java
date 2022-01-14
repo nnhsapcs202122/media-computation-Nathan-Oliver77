@@ -175,14 +175,31 @@ public class Picture extends SimplePicture
         Pixel[][] pixels = this.getPixels2D();
         Pixel topPixel = null;
         Pixel bottomPixel = null;
-        int width = pixels[0].length;
-        for (int row = 0; row < pixels.length; row++)
+        int length = pixels[0].length;
+        for (int row = 0; row < pixels.length / 2; row++)
         {
-            for (int col = 0; col < width / 2; col++)
+            for (int col = 0; col < length; col++)
             {
                 topPixel = pixels[row][col];
-                bottomPixel = pixels[row][width - 1 - col];
+                bottomPixel = pixels[pixels.length - 1 - row][col];
                 bottomPixel.setColor(topPixel.getColor());
+            }
+        } 
+    }
+    
+    public void mirrorHorizontalBotToTop()
+    {
+        Pixel[][] pixels = this.getPixels2D();
+        Pixel topPixel = null;
+        Pixel bottomPixel = null;
+        int length = pixels[0].length;
+        for (int row = 0; row < pixels.length / 2; row++)
+        {
+            for (int col = 0; col < length; col++)
+            {
+                topPixel = pixels[row][col];
+                bottomPixel = pixels[pixels.length - 1 - row][col];
+                topPixel.setColor(bottomPixel.getColor());
             }
         } 
     }
@@ -227,8 +244,10 @@ public class Picture extends SimplePicture
                 rightPixel = pixels[row]                       
                 [mirrorPoint - col + mirrorPoint];
                 rightPixel.setColor(leftPixel.getColor());
+                count++;
             }
         }
+        System.out.println(count);
     }
 
     /** Method to show large changes in color 

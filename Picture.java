@@ -249,7 +249,67 @@ public class Picture extends SimplePicture
         }
         System.out.println(count);
     }
+    
+    public void mirrorArms()
+    {
+        int mirrorPoint = 191;
+        Pixel topPixel = null;
+        Pixel bottomPixel = null;
+        Pixel[][] pixels = this.getPixels2D();
 
+        // loop through the rows
+        for (int row = 159; row < mirrorPoint; row++)
+        {
+            // loop from 13 to just before the mirror point
+            for (int col = 105; col < 170; col++)
+            {
+
+                topPixel = pixels[row][col];      
+                bottomPixel = pixels[mirrorPoint - row + mirrorPoint][col];
+                bottomPixel.setColor(topPixel.getColor());
+            }
+        }
+        
+        mirrorPoint = 192;
+        topPixel = null;
+        bottomPixel = null;
+        pixels = this.getPixels2D();
+
+        // loop through the rows
+        for (int row = 172; row < mirrorPoint; row++)
+        {
+            // loop from 13 to just before the mirror point
+            for (int col = 238; col < 294; col++)
+            {
+
+                topPixel = pixels[row][col];      
+                bottomPixel = pixels[mirrorPoint - row + mirrorPoint][col];
+                bottomPixel.setColor(topPixel.getColor());
+            }
+        }
+    }
+    
+    public void mirrorGull()
+    {
+        int mirrorPoint = 350;
+        Pixel leftPixel = null;
+        Pixel rightPixel = null;
+        Pixel[][] pixels = this.getPixels2D();
+
+        // loop through the rows
+        for (int row = 234; row < 322; row++)
+        {
+            // loop from 13 to just before the mirror point
+            for (int col = 238; col < mirrorPoint; col++)
+            {
+
+                leftPixel = pixels[row][col];      
+                rightPixel = pixels[row][mirrorPoint - col + mirrorPoint];
+                rightPixel.setColor(leftPixel.getColor());
+            }
+        }
+    }
+    
     /** Method to show large changes in color 
      * @param edgeDist the distance for finding edges
      */

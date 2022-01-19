@@ -355,7 +355,13 @@ public class Picture extends SimplePicture
     void cropAndCopy( Picture sourcePicture, int startSourceRow, int endSourceRow,
     int startSourceCol, int endSourceCol, int startDestRow, int startDestCol )
     {
-
+        Pixel srcPixel = null;
+        Pixel destPixel = null;
+        Pixel[][] pixels = this.getPixels2D();
+        for(int rows = startSourceRow; rows < endSourceRow; rows++)
+        {
+            
+        }
     }
 
     /* Main method for testing - each class in Java can have a main 

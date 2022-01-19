@@ -8,14 +8,15 @@
 public class Store
 {
     // instance variables - replace the example below with your own
-    private ArrayList<Customer> customers;
+    private int x;
 
     /**
      * Constructor for objects of class Store
      */
-    public void addSale(String customerName, double amount)
+    public Store()
     {
-        customers.add(new Customer(customerName, amount));
+        // initialise instance variables
+        x = 0;
     }
 
     /**
@@ -24,9 +25,9 @@ public class Store
      * @param  y  a sample parameter for a method
      * @return    the sum of x and y
      */
-    public String nameOfBestCustomer()
+    public int sampleMethod(int y)
     {
-        String topCustomer = customers(0);
-        
+        // put your code here
+        return x + y;
     }
 }

@@ -107,7 +107,7 @@ public class PictureTester
   {
     Picture gull = new Picture("Seagull.jpg");
     gull.explore();
-    gull.mirrorArms();
+    gull.mirrorGull();
     gull.explore();
   }
   

@@ -171,7 +171,8 @@ public class PictureTester
     //testMirrorVertical();
     //testMirrorTemple();
     //testMirrorArms();
-    testMirrorGull();
+    //testMirrorGull();
+    testCropAndCopy();
     //testMirrorDiagonal();
     //testCollage();
     //testCopy();

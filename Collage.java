@@ -11,8 +11,8 @@ public class Collage
     {
         Picture canvas = new Picture(1200, 960);
         Picture source = new Picture("collage.jpg");
-        canvas.explore();
+        source.explore();
         //canvas.cropAndCopy(source, 0, 799, 0, 959, 0, 0);
-        canvas.explore();
+        //canvas.explore();
     }
 }

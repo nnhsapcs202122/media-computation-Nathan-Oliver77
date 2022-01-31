@@ -110,7 +110,7 @@ public class Picture extends SimplePicture
             }
         }
     }
-    
+        
     public void negate()
     {
         Pixel[][] pixels = this.getPixels2D();
@@ -136,6 +136,21 @@ public class Picture extends SimplePicture
                 pixelObj.setRed(average/3);
                 pixelObj.setGreen(average/3);
                 pixelObj.setBlue(average/3);
+            }
+        }
+    }
+    
+    public void makeMagenta()
+    {
+        Pixel[][] pixels = this.getPixels2D();
+        for(Pixel[] rowArray : pixels)
+        {
+            for(Pixel pixelObj : rowArray)
+            {
+                int average = pixelObj.getRed() + pixelObj.getGreen() + pixelObj.getBlue();
+                pixelObj.setRed(average/3 * 1);
+                pixelObj.setGreen(average/3 * 120/255);
+                pixelObj.setBlue(average/3 * 1);
             }
         }
     }
